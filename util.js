@@ -43,4 +43,16 @@ util.escapeFormatting = (string) => {
         string.substr(currentOffset).replace(/([*_~`])/g,'\\$1');
 };
 
+util.userMentionToId = (mention) => {
+    if (/^<@!?\d+>$/.test(mention)) {
+        return /** @type {Snowflake|null} */ mention.match(/^<@!?(\d+)>$/)[1];
+    }
+    else if(/^\d+$/.test(mention)) {
+        return mention;
+    }
+    else {
+        return null;
+    }
+};
+
 module.exports = util;
