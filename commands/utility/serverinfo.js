@@ -18,7 +18,7 @@ module.exports = {
         let generic = '';
         generic += `**Owner:** <@!${guild.ownerId}> (${owner.tag})\n`;
         generic += `**Owner ID:** ${guild.ownerId} \n`;
-        generic += `**Created:** ${guild.createdAt.toUTCString()} \n`;
+        generic += `**Created:** <t:${Math.round(guild.createdAt.getTime() / 1000)}:R> \n`;
         generic += `**Guild ID:** ${guild.id} \n`;
 
         let statistics = '';

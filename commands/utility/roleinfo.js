@@ -34,7 +34,7 @@ module.exports = {
             .setTitle(`About ${role.name}`)
             .setColor(role.color)
             .setDescription(`**Role name:** ${role.name} (${role.id})\n` +
-                `**Created on** ${role.createdAt.toUTCString()}\n` +
+                `**Created:** <t:${Math.round(role.createdAt.getTime() / 1000)}:R>\n` +
                 `**Managed:** ${role.managed ? 'Yes' : 'No'}\n` +
                 `**Position:** ${role.position} (from below)\n` +
                 `**Hoisted:** ${role.hoist ? 'Yes' : 'No'}\n` +
