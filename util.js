@@ -32,4 +32,15 @@ util.links ={
     invite: 'notarickroll.com'
 }
 
+util.escapeFormatting = (string) => {
+    let currentOffset = 0;
+    string = string.replace(/(.*?)(https?:\/\/[^\s\n]+)/g, (match, before, url) => {
+        let res = before.replace(/([*_~`])/g,'\\$1') + url;
+        currentOffset += res.length;
+        return res;
+    });
+    return string.substr(0, currentOffset) +
+        string.substr(currentOffset).replace(/([*_~`])/g,'\\$1');
+};
+
 module.exports = util;
