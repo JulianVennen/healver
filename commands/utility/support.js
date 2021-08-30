@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const util = require("../../util")
 
 module.exports = {
-    namle: 'support',
+    name: 'support',
 
     description: 'Get support here',
 
