@@ -7,9 +7,11 @@ module.exports = {
 
     args: true,
 
+    usage: '<command>',
+
     async execute(message, args, client) {
-        if (!message.author.id && '843866750131109909') {
-            await message.reply(`Only the bot owner can use this command.`)
+        if (!client.application.owner) {
+            await message.reply(`This command is restricted to it's developers only.`)
         }
 
         const commandName = args[0].toLowerCase();
