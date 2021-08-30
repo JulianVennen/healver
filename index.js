@@ -37,7 +37,6 @@ async function main() {
         const command = client.commands.get(commandName)
             || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
         if (!command) return;
-        //if (!client.commands.has(commandName)) return;
 
         if (command.permissions) {
             const authorPerms = message.channel.permissionsFor(message.author);
