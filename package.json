@@ -1,0 +1,22 @@
+{
+  "name": "healver",
+  "version": "1.0.0",
+  "description": "A multipurpose Javascript bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Modraxis/healver.git"
+  },
+  "author": "ScourgeTheHedgehog",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Modraxis/healver/issues"
+  },
+  "homepage": "https://github.com/Modraxis/healver#readme",
+  "dependencies": {
+    "discord.js": "^13.1.0"
+  }
+}
