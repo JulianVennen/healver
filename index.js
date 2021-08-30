@@ -8,6 +8,7 @@ const mysql = require('mysql2/promise')
 
 async function main() {
     const database = await mysql.createConnection(config.database);
+    //create any tables needed if they don't already exist
     await database.execute("CREATE TABLE IF NOT EXISTS `example` (`id` int PRIMARY KEY AUTO_INCREMENT , `content` TEXT NOT NULL)")
 
     const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MEMBERS], allowedMentions: { parse: [] } });
