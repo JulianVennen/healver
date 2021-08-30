@@ -38,6 +38,14 @@ client.on('message', message => {
         || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
     if (!command) return;
     //if (!client.commands.has(commandName)) return;
+
+    if (command.permissions) {
+        const authorPerms = message.channel.permissionsFor(message.author);
+        if (!authorPerms || !authorPerms.has(command.permissions)) {
+            return message.reply(`You do not have the required permissions for this: \`${command.permissions}\``);
+        }
+    }
+
     if (command.args && !args.length) {
         return message.channel.send(`You didn't provide any arguments, ${message.author}!`);
     }

@@ -6,6 +6,8 @@ module.exports = {
 
     description: 'Say something through the bot',
 
+    permissions: 'MANAGE_GUILD',
+
     usage: '<argument>',
 
     async execute(message, args, client) {
