@@ -7,15 +7,13 @@ module.exports = {
 
     name: 'id',
 
+    args: true,
+
     usage: '<username|username#1234>',
 
     description: 'Get a user\'s ID',
 
     async execute(message, args, client) {
-        if (!args.length) {
-            return message.reply('STOP, hammer time :hammer:')
-        }
-
         const fullName = args.join(' ');
         let users = new Collection();
         const [,name, discrim] = fullName.match(/([^#]*)#?(\d{4})?$/);

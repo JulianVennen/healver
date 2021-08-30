@@ -4,6 +4,8 @@ const util = require('../../util');
 module.exports = {
     name: 'roleinfo',
 
+    args: true,
+
     aliases: ['ri', 'role'],
 
     usage: '<@role|id>',
@@ -11,10 +13,6 @@ module.exports = {
     description: 'Get info about a role',
 
     async execute(message, args, client) {
-        if (!args.length) {
-            return await message.channel.send(`You have to provide a role ID ${message.author}!`);
-        }
-
         let roleid = util.roleMentionToId(args[0]);
 
         if (!roleid) return sendUsage();
