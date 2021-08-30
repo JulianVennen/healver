@@ -7,7 +7,6 @@ const fs = require('fs');
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MEMBERS], allowedMentions: { parse: [] } });
 
-//const client = new Discord.Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 client.commands = new Discord.Collection();
 const prefix = config.prefix
 
