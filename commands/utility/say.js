@@ -14,7 +14,7 @@ module.exports = {
 
     async execute(message, args, client) {
         const embed = new Discord.MessageEmbed()
-            .setDescription(args.toString())
+            .setDescription(args.join(' '))
             .setFooter(`Command executed by ${message.author.tag}`)
             .setTimestamp()
             .setColor(color.green)
