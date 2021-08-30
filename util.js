@@ -23,7 +23,7 @@ util.roleMentionToId = (mention) => {
 
 util.color ={
     blue: 0xADD8E6,
-    red: 0xFF7F7F,
+    red: 0xf04747,
     green: 0x90ee90
 }
 
