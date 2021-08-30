@@ -2,7 +2,7 @@
 
 const Discord = require('discord.js');
 const { Client, Intents } = require('discord.js');
-const config = require('./config');
+const config = require('./config.json');
 const fs = require('fs');
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MEMBERS], allowedMentions: { parse: [] } });
