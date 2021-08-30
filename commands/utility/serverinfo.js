@@ -41,6 +41,6 @@ module.exports = {
                 /** @type {any} */ {name: '__**Statistics**__', value: statistics, inline: true },
                 /** @type {any} */ {name: '__**Features**__', value: features.join(', ') || 'None', inline: false }
             )
-        message.channel.send({ embeds: [embed] });
+        message.reply({ embeds: [embed] });
     }
 }

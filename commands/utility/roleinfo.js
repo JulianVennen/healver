@@ -43,6 +43,6 @@ module.exports = {
                 `**Color:** \`${role.hexColor}\` (\`${role.color}\`)\n` +
                 `**Permissions:** ${permissions}`);
 
-        await message.channel.send({ embeds: [embed] });
+        await message.reply({ embeds: [embed] });
     }
 }
