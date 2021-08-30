@@ -1,7 +1,7 @@
 const {User, Collection, MessageEmbed} = require('discord.js');
 const util = require('../../util');
 
-const resultLimit = 10;
+const resultLimit = 20;
 
 module.exports = {
 
@@ -29,7 +29,7 @@ module.exports = {
         if (users.size === 0) {
             embed.setDescription('No users found')
                 .setColor(util.color.red);
-            return await message.reply(embed);
+            return await message.reply( { embeds: [embed] } );
         }
         if (users.size > resultLimit) {
             embed.setTitle(`First ${resultLimit} results of user search for ${fullName}`);
