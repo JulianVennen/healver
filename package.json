@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Modraxis/healver#readme",
   "dependencies": {
-    "discord.js": "^13.1.0"
+    "discord.js": "^13.1.0",
+    "mysql2": "^2.3.0"
   }
 }

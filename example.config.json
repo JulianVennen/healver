@@ -1,4 +1,10 @@
 {
     "prefix": ";",
-    "token": ""
+    "token": "",
+    "database": {
+        "host": "127.0.0.1",
+        "user": "healver",
+        "password": "password",
+        "database": "healver"
+    }
 }

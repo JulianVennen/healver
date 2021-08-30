@@ -4,8 +4,12 @@ const Discord = require('discord.js');
 const { Client, Intents } = require('discord.js');
 const config = require('./config.json');
 const fs = require('fs');
+const mysql = require('mysql2/promise')
 
 async function main() {
+    const database = await mysql.createConnection(config.database);
+    await database.execute("CREATE TABLE IF NOT EXISTS `example` (`id` int PRIMARY KEY AUTO_INCREMENT , `content` TEXT NOT NULL)")
+
     const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MEMBERS], allowedMentions: { parse: [] } });
 
     client.commands = new Discord.Collection();
@@ -49,7 +53,7 @@ async function main() {
             return message.reply(`Please specify arguments for this command - \`${command.usage.toString()}\``);
         }
         try {
-            command.execute(message, args, client);
+            command.execute(message, args, client, database);
         } catch (error) {
             console.error(error);
             message.reply(`there was an error trying to execute that command!\n\`${error}\``);
