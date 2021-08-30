@@ -7,6 +7,8 @@ module.exports = {
 
     description: 'List all of my commands or info about a specific command.',
 
+    usage: '[command]',
+
     cooldown: 3,
 
     async execute(message, args, client) {

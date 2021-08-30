@@ -6,6 +6,8 @@ module.exports = {
 
     aliases: ['av', 'pfp'],
 
+    usage: '[@user|id]',
+
     description: 'Check a user\'s avatar',
 
 

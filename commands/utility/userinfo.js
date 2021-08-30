@@ -7,6 +7,8 @@ module.exports = {
 
     aliases: ['ui', 'u'],
 
+    usage: '<@user|id>',
+
     description: 'Display information about a user',
 
 

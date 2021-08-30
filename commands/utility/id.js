@@ -7,6 +7,8 @@ module.exports = {
 
     name: 'id',
 
+    usage: '<username|username#1234>',
+
     description: 'Get a user\'s ID',
 
     async execute(message, args, client) {

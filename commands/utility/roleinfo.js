@@ -6,6 +6,8 @@ module.exports = {
 
     aliases: ['ri', 'role'],
 
+    usage: '<@role|id>',
+
     description: 'Get info about a role',
 
     async execute(message, args, client) {
